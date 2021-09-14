@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Christopher Ek</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Christopher personal website">
+	<meta name="author" content="Christopher Ek">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="../assets/fontawesome/js/all.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../assets/plugins/tiny-slider/tiny-slider.css">
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/style1.css">
+
+</head> 
+
+<body>
+	
+	<header class="header text-center">	    
+		<div class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="../about.html">Christopher Ek</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark" >
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column" >
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/profile.png" alt="image" >			
+						
+						<div class="bio mb-3">Hi, my name is Christopher Ek and I'm a Software Developer/InfoSec. Welcome to my personal website!</div><!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href=""><i class="fab fa-github-alt fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<hr> 
+					</div><!--//profile-section-->
+					
+					<ul class="navbar-nav flex-column text-left">
+						<li class="nav-item active">
+							<a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../portfolio.html"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../resume.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../blog-home.html"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../contact.html"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Contact</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-cogs fa-fw mr-2"></i>More Pages
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="project.html">Project Page</a>
+								<a class="dropdown-item" href="blog-home.html">Blog Home 1</a>
+								<a class="dropdown-item" href="blog-home-alt.html">Blog Home 2</a>
+								<a class="dropdown-item" href="blog-post.html">Blog Post</a>
+							</div>
+						</li>
+					</ul>
+					
+					<div class="my-2">
+						<a class="btn btn-primary" href="../contact.html" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Hire Me</a>
+					</div>
+					
+	
+					<div class="dark-mode-toggle text-center w-100">
+						<hr class="mb-4">
+					    <h4 class="toggle-name mb-3 "><i class="fas fa-adjust mr-1"></i>Dark Mode</h4>
+					    
+					    <input class="toggle" id="darkmode" type="checkbox">
+					    <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>
+					    
+					</div><!--//dark-mode-toggle-->
+					
+				</div>
+			</nav>
+		</div><!--//force-overflow-->
+	</header>
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">How RSA Encryption works: With Math & Python implementation</h2>
+				    <div class="meta mb-3"><span class="date">Published 2021-02-27</span><span class="time">10 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <p>There are three types of encryption, asymmetric, symmetric, and (hash functions. Even though hash functions are one-way functions and not considered encryption). Asymmetric encryption like RSA, Diffie-hellman, and DSA uses a public and a private key. In asymmetric encryption, only the receiver will know the private key. The sender will encrypt the message using the receiver's public key. Symmetric encryption like AES, 3DES, DES use the same key for encryption as for decryption. Hash functions will just scramble the text one way.<br>
+						<br>
+						RSA is today's standard public-key encryption. The default key length for RSA is between 1,024-4096bits. RSA-768 was a while ago and that's because of refactoring. The security in RSA lies in prime number refactoring. This means if one would come up with a solution/algo that could refactor large prime numbers. RSA would be dead. You can read more about the "factoring problem" 
+						<a href="https://en.wikipedia.org/wiki/Integer_factorization">here</a>. Disregarding that fact it would take about 300 trillion years for a normal pc to break RSA 2048 with today's methods.						
+						</p>				    
+				    <h3 class="mt-5">Math Implementation</h3>
+				    
+						<h4 class="mt-5 mb-3">Explanation</h4>
+						<p>First of all we need to pick two numbers these need to be prime numbers<br>
+						\(P = 3\) and \(Q = 11\)<br>
+						Next we have to get \(N\) which will be. \(N = P*Q\) and in this case that would be<br> \(N=33\). <br><br>
+						Next up is \(F\) which is \(F = (P-1) * (Q-1)\) and in this case that would be<br> \(F=20\)<br><br>
+						We also need to pick a new prime  number \(E\) that fellow these rules 
+						\(1< E < F\) and I will pick \(E=7\)<br><br>
+						
+						We now have to find the \(D\) value. Which we do with this rule<br> \(D * E (mod F) = 1\). <br><br>This means that in this case \(D=3\) because 3*7 (Mod 20) = 1. The value of D can be quite hard to find so I wrote some python code to find it. </p>
+						<script src="https://gist.github.com/Bazhful/160588f6983ad8799fa08b1831c4c20d.js"></script>
+						<p>
+						Now comes the fun part encryption and decryption.<br>
+						To Encrypt a message we need \(E,N\)<br>
+						To Decrypt a message we need \(D,N\)</p>
+
+						<h5 class>Encryption</h5>
+						<p>To encrypt a message we take the message which in this case in just the integer 13<br>
+						Message = \(13\)<br>
+						Encryption = \(message^P(modN)\)<br>
+						Result = \(13^7(mod33) = 7\)<br>
+						Encrypted message = \(7\)</p>
+						
+						<h5>Decryption</h5>
+						<p>
+						Encrypted message = \(7\)<br>
+						Decryption = \(encrypted-message^D(modN)\)<br>
+						Result = \(7^3(mod33) = 13\)<br>
+						Decrypted Message = \(13\)<br>
+						You have now sucessfully encrypted and decrypted using RSA(sort of). P & Q is has to be really long otherwise its not safe. I do not recommend implementing your own RSA encryption. Since most of the time its not keys length that is the problem but the implementation.
+						</p>
+
+						<h3 class="mt-3">Python Implementation</h3>
+				    
+						<h4 class="mt-4 mb-3">Code</h4>
+						<h5>Simple version</h5>
+						<script src="https://gist.github.com/Bazhful/c14848d0967897dfe10b0445048f78de.js"></script>
+						<h5>Advanced version</h5>
+						<script src="https://gist.github.com/Bazhful/754a6baff4a44243d85a99218b42abf2.js"></script>
+
+				
+				<div class="blog-comments-section">
+					<div id="disqus_thread"></div>
+					<script>
+					    /**
+					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+					     *  PLATFORM OR CMS.
+					     *  
+					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+					     *  https://disqus.com/admin/universalcode/#configuration-variables
+					     */
+					    /*
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = PAGE_URL;  
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = PAGE_IDENTIFIER; 
+					    };
+					    */
+					    
+					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+					        var d = document, s = d.createElement('script');
+					        
+					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
+					        s.src = 'https://3wmthemes.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    <section class="promo-section theme-bg-light py-5 text-center">
+		    <div class="container single-col-max-width">
+			    <h2 class="title">Promo Section Heading</h2>
+			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <figure class="promo-figure">
+			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+			    </figure>
+		    </div><!--//container-->
+	    </section><!--//promo-section-->
+	    
+
+    </div><!--//main-wrapper-->
+        
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Dark Mode -->
+	<script src="../assets/plugins/js-cookie.min.js"></script>
+	<script src="../assets/js/dark-mode.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="../assets/js/demo/style-switcher.js"></script> 
+
+		<!--Math Code-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+</body>
+</html> 
+
