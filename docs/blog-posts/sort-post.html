@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Christopher Ek</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Christopher personal website">
+	<meta name="author" content="Christopher Ek">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	
+	<!-- FontAwesome JS -->
+    <script defer src="../assets/fontawesome/js/all.js"></script>
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../assets/plugins/tiny-slider/tiny-slider.css">
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/style1.css">
+
+</head> 
+
+<body>
+	
+	<header class="header text-center">	    
+		<div class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="../about.html">Christopher Ek</a></h1>
+			
+			<nav class="navbar navbar-expand-lg navbar-dark" >
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navigation" class="collapse navbar-collapse flex-column" >
+					<div class="profile-section pt-3 pt-lg-0">
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/profile.png" alt="image" >			
+						
+						<div class="bio mb-3">Hi, my name is Christopher Ek and I'm a Software Developer/InfoSec. Welcome to my personal website!</div><!--//bio-->
+						<ul class="social-list list-inline py-2 mx-auto">
+							<li class="list-inline-item"><a href="https://github.com/Bazhful"><i class="fab fa-github-alt fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+						<hr> 
+					</div><!--//profile-section-->
+					
+					<ul class="navbar-nav flex-column text-left">
+						<li class="nav-item active">
+							<a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../portfolio.html"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../resume.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../blog-home.html"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../contact.html"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Contact</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-cogs fa-fw mr-2"></i>More Pages
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="project.html">Project Page</a>
+								<a class="dropdown-item" href="blog-home.html">Blog Home 1</a>
+								<a class="dropdown-item" href="blog-home-alt.html">Blog Home 2</a>
+								<a class="dropdown-item" href="blog-post.html">Blog Post</a>
+							</div>
+						</li>
+					</ul>
+					
+					<div class="my-2">
+						<a class="btn btn-primary" href="../contact.html" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Hire Me</a>
+					</div>
+					
+	
+					<div class="dark-mode-toggle text-center w-100">
+						<hr class="mb-4">
+					    <h4 class="toggle-name mb-3 "><i class="fas fa-adjust mr-1"></i>Dark Mode</h4>
+					    
+					    <input class="toggle" id="darkmode" type="checkbox">
+					    <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>
+					    
+					</div><!--//dark-mode-toggle-->
+					
+				</div>
+			</nav>
+		</div><!--//force-overflow-->
+	</header>
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">How RSA Encryption works: With Math & Python implementation</h2>
+				    <div class="meta mb-3"><span class="date">Published 2021-02-27</span><span class="time">10 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <p><br>
+				    	We are not going to go into advanced sorting like merge sort & quick sort here. I will try to explain some core concepts within sorting. Then I will show three types of sorting algorithms like Insertion, Selection and the famous Bubble-sort.
+						<br>
+						First of all, we need to understand how binary search works. For this purpose, we will use an array.
+
+						\ (arr = [1, 2, 4, 5, 6, 7]\)<br>
+
+						If we want to find the number 2 in this array, we can start looking at the middle of the array and determine if our number is equal to the current number, which in this case is 4... "It is not equal.". We have concluded that our element is less than 4, so now we change the last and middle values of our current array so that the last becomes the middle and the middle becomes the new high value divided by the first, resulting in<br>
+
+						\ /(arr = [1, 2, 3]\)<br>
+
+						And we do the whole thing again, and check if the middle value is equal to our number... It is. That means that we have found our number using binary search. This may seem arbitrary, but the binary search has a time complexity of Big O(log n). This means that finding 1 million sorted items requires 20 "checks" and 1 billion requires 29, 9. However, this means that binary search is a logarithmic action. 2, 4, 8, 16, 32...<br>
+
+						It's important to remember that binary searches only work with sorted data. So sorting is quite crucial. Computers have very poor tunnel vision. Sorting an array-like
+
+						\ /(arr = [4, 3, 6, 1]\)<br>
+
+						This would not be hard for a human, but for a computer, it's not so easy. The computer can only compare two values at a time. So we need to develop algorithms for the computer to be able to sort efficiently. In sorting you often find the term "divide & conquer".<br></p>
+
+						<h4 class="mt-5 mb-3">What does "Divide & Conquer" mean?</h4>
+						<p> Divide and Conquer means that we split the array into multiple arrays and sort the values separately. Click here if you wanna know more about "Divide and Conquer" algorithms like quick-sort and merge-sort.</p>				    
+				    <h3 class="mt-5">Array</h3>		    
+						<h4 class="mt-5 mb-3">Explanation</h4>
+						<p>In C# you create an array like this. Read the comments.</p>
+						<script src="https://gist.github.com/Bazhful/35fe1f92a1dc0be50afacd9f0b0cb9ed.js"></script>
+						<h5>Array Push</h5>
+						<p>When you push an element into the array, it will take the next free spot. If we create an integer array with size 7. The array currently contains the numbers 1 and 2. So if we push number 4 onto the array. It would be placed at index 2, or = [1, 2, 4, x, x, x, x](x = empty).<br>
+						
+
+
+
+						<h3 class="mt-3">Python Implementation</h3>
+				    
+						<h4 class="mt-4 mb-3">Code</h4>
+						<h5>Simple version</h5>
+						<script src="https://gist.github.com/Bazhful/c14848d0967897dfe10b0445048f78de.js"></script>
+						<h5>Advanced version</h5>
+						<script src="https://gist.github.com/Bazhful/754a6baff4a44243d85a99218b42abf2.js"></script>
+
+				
+				<div class="blog-comments-section">
+					<div id="disqus_thread"></div>
+					<script>
+					    /**
+					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+					     *  PLATFORM OR CMS.
+					     *  
+					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+					     *  https://disqus.com/admin/universalcode/#configuration-variables
+					     */
+					    /*
+					    var disqus_config = function () {
+					        // Replace PAGE_URL with your page's canonical URL variable
+					        this.page.url = PAGE_URL;  
+					        
+					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					        this.page.identifier = PAGE_IDENTIFIER; 
+					    };
+					    */
+					    
+					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+					        var d = document, s = d.createElement('script');
+					        
+					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
+					        s.src = 'https://3wmthemes.disqus.com/embed.js';
+					        
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
+					    })();
+					</script>
+					<noscript>
+					    Please enable JavaScript to view the 
+					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+					        comments powered by Disqus.
+					    </a>
+					</noscript>
+				</div><!--//blog-comments-section-->
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    <section class="promo-section theme-bg-light py-5 text-center">
+		    <div class="container single-col-max-width">
+			    <h2 class="title">Promo Section Heading</h2>
+			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <figure class="promo-figure">
+			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+			    </figure>
+		    </div><!--//container-->
+	    </section><!--//promo-section-->
+	    
+
+    </div><!--//main-wrapper-->
+        
+    <!-- Javascript -->          
+    <script src="../assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="../assets/plugins/popper.min.js"></script> 
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/blog.js"></script>
+    
+    <!-- Dark Mode -->
+	<script src="../assets/plugins/js-cookie.min.js"></script>
+	<script src="../assets/js/dark-mode.js"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="../assets/js/demo/style-switcher.js"></script> 
+
+		<!--Math Code-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+</body>
+</html> 
+
