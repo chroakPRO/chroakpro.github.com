@@ -128,11 +128,28 @@
 						<h4 class="mt-5 mb-3">What does "Divide & Conquer" mean?</h4>
 						<p> Divide and Conquer means that we split the array into multiple arrays and sort the values separately. Click here if you wanna know more about "Divide and Conquer" algorithms like quick-sort and merge-sort.</p>				    
 				    <h3 class="mt-5">Array</h3>		    
-						<h4 class="mt-5 mb-3">Explanation</h4>
+						<h4 class="mt-5 mb-3">Explanation & Code</h4>
 						<p>In C# you create an array like this. Read the comments.</p>
 						<script src="https://gist.github.com/Bazhful/35fe1f92a1dc0be50afacd9f0b0cb9ed.js"></script>
 						<h5>Array Push</h5>
 						<p>When you push an element into the array, it will take the next free spot. If we create an integer array with size 7. The array currently contains the numbers 1 and 2. So if we push number 4 onto the array. It would be placed at index 2, or = [1, 2, 4, x, x, x, x](x = empty).<br>
+						<script src="https://gist.github.com/Bazhful/6d0f5a7eba2358cf7d24aa93b9326f96.js"></script>
+						<h5>Array Peak</h5>
+						<p> This simple program will just print every element in the array.</p>
+						<script src="https://gist.github.com/Bazhful/52612938dd3b00cb3b58ba0651b30ff3.js"></script>
+						<h5>Arr Pop</h5>
+						<p>When you pop an element from an array you remove it. The way to do that dynamically is to transfer all the items the user dosen't wanna delete to another array. This code will not be following that approach. <br>
+						Let's say we have an array like this z = [0, 1, 2]. Lets say we wanted to remove index 1. If we just set z[1] to 0, the array will look like this; z = [0, x, 2]. That's not correct we stil have to move 2 to index pos 1.</p><script src="https://gist.github.com/Bazhful/2f0ef6d1873c7ff0f7b000e89cb3aefc.js"></script>
+					<h3 class="mt-5">Bubble Sort</h3>
+						<h4 class="mt-5 mb-3">Explanation & CSharp Code</h4>
+
+						Bubble Sort is infamous for being  a very slow sorting algortihm. Bubble Sort is a good sorting algorithm for beginners since it usally makes sense. Bubble Sort works in O(n²) which is really bad. So 4 elements would take 16 steps to bubble sort at worst case.<br>
+						Bubble sort will take index 0 and compare to against its right neighbor if its greater then its neighbor the elements will swap place.
+						<script src="https://gist.github.com/Bazhful/ac8224270ad0e20665adb18f68c5e0ea.js"></script>
+
+
+
+
 						
 
 
