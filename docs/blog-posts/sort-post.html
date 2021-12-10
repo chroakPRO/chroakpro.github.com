@@ -101,8 +101,8 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container single-col-max-width">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">How RSA Encryption works: With Math & Python implementation</h2>
-				    <div class="meta mb-3"><span class="date">Published 2021-02-27</span><span class="time">10 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
+				    <h2 class="title mb-2">Sorting Algorithms</h2>
+				    <div class="meta mb-3"><span class="date">Published 2021-02-27</span><span class="time">20 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
 			    </header>
 			    
 			    <div class="blog-post-body">
@@ -125,25 +125,31 @@
 
 						This would not be hard for a human, but for a computer, it's not so easy. The computer can only compare two values at a time. So we need to develop algorithms for the computer to be able to sort efficiently. In sorting you often find the term "divide & conquer".<br></p>
 
-						<h4 class="mt-5 mb-3">What does "Divide & Conquer" mean?</h4>
+						<br><h4 style="text-decoration: 	;"> What does "Divide & Conquer" mean?</h4>
 						<p> Divide and Conquer means that we split the array into multiple arrays and sort the values separately. Click here if you wanna know more about "Divide and Conquer" algorithms like quick-sort and merge-sort.</p>				    
-				    <h3 class="mt-5">Array</h3>		    
-						<h4 class="mt-5 mb-3">Explanation & Code</h4>
+				       <br><br>
+				       <h3 style="text-decoration: underline;"> array </h3>
+						<h4 style="text-decoration: ;"> Explanation & Code</h4>
 						<p>In C# you create an array like this. Read the comments.</p>
+						<p>Array is the data-structure that will be used during bubble & selection sort.</p>
 						<script src="https://gist.github.com/Bazhful/35fe1f92a1dc0be50afacd9f0b0cb9ed.js"></script><br><br>
 
-					<h3 class="mt-5">Functions</h3>
-						<h4 class="mt-5 mb-3">Array Push</h4>
+
+			       <h3 style="text-decoration: underline;"> function </h3>
+						<h4 style="text-decoration: ;"> Array Push</h4>
 						<p>When you push an element into the array, it will take the next free spot. If we create an integer array with size 7. The array currently contains the numbers 1 and 2. So if we push number 4 onto the array. It would be placed at index 2, or = [1, 2, 4, x, x, x, x](x = empty).<br>
 						<script src="https://gist.github.com/Bazhful/6d0f5a7eba2358cf7d24aa93b9326f96.js"></script><br><br>
-						<h4 class="mt-5 mb-3">Array Peak</h4>
+						<h3 style="text-decoration: underline;"> function </h3>
+						<h4 style="text-decoration: ;"> Array Peak</h4>
 						<p> This simple program will just print every element in the array.</p>
 						<script src="https://gist.github.com/Bazhful/52612938dd3b00cb3b58ba0651b30ff3.js"></script><br><br>
-						<h4 class="mt-5 mb-3">Array Pop</h4>
+						<h3 style="text-decoration: underline;"> function </h3>
+						<h4 style="text-decoration: ;"> Array Pop</h4>
 						<p>When you pop an element from an array you remove it. The way to do that dynamically is to transfer all the items the user dosen't wanna delete to another array. This code will not be following that approach. <br>
-						Let's say we have an array like this z = [0, 1, 2]. Lets say we wanted to remove index 1. If we just set z[1] to 0, the array will look like this; z = [0, x, 2]. That's not correct we stil have to move 2 to index pos 1.</p><script src="https://gist.github.com/Bazhful/2f0ef6d1873c7ff0f7b000e89cb3aefc.js"></script><br><br>
-					<h3 class="mt-5">Bubble Sort</h3>
-						<h4 class="mt-5 mb-3">Explanation & CSharp Code</h4>
+						<br>Let's say we have an array like this z = [0, 1, 2]. <br>Lets say we wanted to remove index 1. <br>If we just set z[1] to 0, the array will look like this; z = [0, x, 2].<br> That's not correct we still have to move "2" to index pos 1.</p><script src="https://gist.github.com/Bazhful/2f0ef6d1873c7ff0f7b000e89cb3aefc.js"></script><br><br>
+						<h3 style="text-decoration: underline;"> algorithm </h3>
+			       <h3 style="text-decoration: underline;"> bubble-sort </h3>
+						<h4 style="text-decoration: ;"> Explanation & CSharp Code</h4>
 
 
 						"SCHMIDT: Now, Senator, you're here at Google and I like to think of the presidency as a job interview. Now, it's hard to get a job as president. And--I mean, you're going to do a great job. It's also hard to get a job at Google. We have questions and we ask our candidates questions. And this one is from Larry Schwimmer. What--you guys think I'm kidding, it's right here.[1] What is the most efficient way to sort a million 32-bit integers?<br>
@@ -163,60 +169,9 @@
 						<script src="https://gist.github.com/Bazhful/ac8224270ad0e20665adb18f68c5e0ea.js"></script><br><br>
 						<h3 class="mt-3">Selection Sort</h3>
 				    	<p> Coming soon, ran out of energy </p>
-
-				
-				<div class="blog-comments-section">
-					<div id="disqus_thread"></div>
-					<script>
-					    /**
-					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-					     *  PLATFORM OR CMS.
-					     *  
-					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-					     *  https://disqus.com/admin/universalcode/#configuration-variables
-					     */
-					    /*
-					    var disqus_config = function () {
-					        // Replace PAGE_URL with your page's canonical URL variable
-					        this.page.url = PAGE_URL;  
-					        
-					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					        this.page.identifier = PAGE_IDENTIFIER; 
-					    };
-					    */
-					    
-					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-					        var d = document, s = d.createElement('script');
-					        
-					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
-					        s.src = 'https://3wmthemes.disqus.com/embed.js';
-					        
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					</script>
-					<noscript>
-					    Please enable JavaScript to view the 
-					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-					        comments powered by Disqus.
-					    </a>
-					</noscript>
-				</div><!--//blog-comments-section-->
 				
 		    </div><!--//container-->
 	    </article>
-	    
-	    <section class="promo-section theme-bg-light py-5 text-center">
-		    <div class="container single-col-max-width">
-			    <h2 class="title">Promo Section Heading</h2>
-			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-                <figure class="promo-figure">
-			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
-			    </figure>
-		    </div><!--//container-->
-	    </section><!--//promo-section-->
-	    
 
     </div><!--//main-wrapper-->
         
