@@ -109,19 +109,19 @@
 				    <p><br>
 				    	We are not going to go into advanced sorting like merge sort & quick sort here. I will try to explain some core concepts within sorting. Then I will show three types of sorting algorithms like Insertion, Selection and the famous Bubble-sort.
 						<br>
-						First of all, we need to understand how binary search works. For this purpose, we will use an array.
+						First of all, we need to understand how binary search works. For this purpose, we will use an array.<br><br>
+						\(arr = [1, 2, 4, 5, 6, 7]\)<br><br>
 
-						\ (arr = [1, 2, 4, 5, 6, 7]\)<br>
+						If we want to find the number 2 in this array, we can start looking at the middle of the array and determine if our number is equal to the current number, which in this case is 4... "It is not equal.". We have concluded that our element is less than 4, so now we change the last and middle values of our current array so that the last becomes the middle and the middle becomes the new high value divided by the first, resulting in<br><br>
 
-						If we want to find the number 2 in this array, we can start looking at the middle of the array and determine if our number is equal to the current number, which in this case is 4... "It is not equal.". We have concluded that our element is less than 4, so now we change the last and middle values of our current array so that the last becomes the middle and the middle becomes the new high value divided by the first, resulting in<br>
-
-						\ /(arr = [1, 2, 3]\)<br>
+						\(arr = [1, 2, 3]\)<br><br>
 
 						And we do the whole thing again, and check if the middle value is equal to our number... It is. That means that we have found our number using binary search. This may seem arbitrary, but the binary search has a time complexity of Big O(log n). This means that finding 1 million sorted items requires 20 "checks" and 1 billion requires 29, 9. However, this means that binary search is a logarithmic action. 2, 4, 8, 16, 32...<br>
 
-						It's important to remember that binary searches only work with sorted data. So sorting is quite crucial. Computers have very poor tunnel vision. Sorting an array-like
+						It's important to remember that binary searches only work with sorted data. So sorting is quite crucial. Computers have very poor tunnel vision. Sorting an array-like.. -><br><br>
 
-						\ /(arr = [4, 3, 6, 1]\)<br>
+
+						\(arr = [4, 3, 6, 1]\)<br><br>
 
 						This would not be hard for a human, but for a computer, it's not so easy. The computer can only compare two values at a time. So we need to develop algorithms for the computer to be able to sort efficiently. In sorting you often find the term "divide & conquer".<br></p>
 
@@ -130,37 +130,39 @@
 				    <h3 class="mt-5">Array</h3>		    
 						<h4 class="mt-5 mb-3">Explanation & Code</h4>
 						<p>In C# you create an array like this. Read the comments.</p>
-						<script src="https://gist.github.com/Bazhful/35fe1f92a1dc0be50afacd9f0b0cb9ed.js"></script>
-						<h5>Array Push</h5>
+						<script src="https://gist.github.com/Bazhful/35fe1f92a1dc0be50afacd9f0b0cb9ed.js"></script><br><br>
+
+					<h3 class="mt-5">Functions</h3>
+						<h4 class="mt-5 mb-3">Array Push</h4>
 						<p>When you push an element into the array, it will take the next free spot. If we create an integer array with size 7. The array currently contains the numbers 1 and 2. So if we push number 4 onto the array. It would be placed at index 2, or = [1, 2, 4, x, x, x, x](x = empty).<br>
-						<script src="https://gist.github.com/Bazhful/6d0f5a7eba2358cf7d24aa93b9326f96.js"></script>
-						<h5>Array Peak</h5>
+						<script src="https://gist.github.com/Bazhful/6d0f5a7eba2358cf7d24aa93b9326f96.js"></script><br><br>
+						<h4 class="mt-5 mb-3">Array Peak</h4>
 						<p> This simple program will just print every element in the array.</p>
-						<script src="https://gist.github.com/Bazhful/52612938dd3b00cb3b58ba0651b30ff3.js"></script>
-						<h5>Arr Pop</h5>
+						<script src="https://gist.github.com/Bazhful/52612938dd3b00cb3b58ba0651b30ff3.js"></script><br><br>
+						<h4 class="mt-5 mb-3">Array Pop</h4>
 						<p>When you pop an element from an array you remove it. The way to do that dynamically is to transfer all the items the user dosen't wanna delete to another array. This code will not be following that approach. <br>
-						Let's say we have an array like this z = [0, 1, 2]. Lets say we wanted to remove index 1. If we just set z[1] to 0, the array will look like this; z = [0, x, 2]. That's not correct we stil have to move 2 to index pos 1.</p><script src="https://gist.github.com/Bazhful/2f0ef6d1873c7ff0f7b000e89cb3aefc.js"></script>
+						Let's say we have an array like this z = [0, 1, 2]. Lets say we wanted to remove index 1. If we just set z[1] to 0, the array will look like this; z = [0, x, 2]. That's not correct we stil have to move 2 to index pos 1.</p><script src="https://gist.github.com/Bazhful/2f0ef6d1873c7ff0f7b000e89cb3aefc.js"></script><br><br>
 					<h3 class="mt-5">Bubble Sort</h3>
 						<h4 class="mt-5 mb-3">Explanation & CSharp Code</h4>
 
-						Bubble Sort is infamous for being  a very slow sorting algortihm. Bubble Sort is a good sorting algorithm for beginners since it usally makes sense. Bubble Sort works in O(n²) which is really bad. So 4 elements would take 16 steps to bubble sort at worst case.<br>
-						Bubble sort will take index 0 and compare to against its right neighbor if its greater then its neighbor the elements will swap place.
-						<script src="https://gist.github.com/Bazhful/ac8224270ad0e20665adb18f68c5e0ea.js"></script>
 
+						"SCHMIDT: Now, Senator, you're here at Google and I like to think of the presidency as a job interview. Now, it's hard to get a job as president. And--I mean, you're going to do a great job. It's also hard to get a job at Google. We have questions and we ask our candidates questions. And this one is from Larry Schwimmer. What--you guys think I'm kidding, it's right here.[1] What is the most efficient way to sort a million 32-bit integers?<br>
+						OBAMA: Well...<br>
+<br>
+						SCHMIDT: Maybe--I'm sorry...<br>
+<br>
+						OBAMA: No, no, no, no. I think--I think the bubble sort would be the wrong way to go."<br>
+<br>
+						Bubble Sort is infamous for being  a very slow sorting algortihm. Bubble Sort is a good sorting algorithm for beginners since it usally makes sense. Bubble Sort works in O(n²) which is really bad. So 4 elements would take 16 steps to bubble sort at worst case.<br><br><br>
+							<h5 style="text-decoration: underline;"> steps </h5>
+							\(1.\) Comparetwo values that are next to each other.<br>
+							\(2.\) If the left values is greater, swap them.<br>
+							\(3.\) Move one index to the right.<br><br><br>
 
-
-
-						
-
-
-
-						<h3 class="mt-3">Python Implementation</h3>
-				    
-						<h4 class="mt-4 mb-3">Code</h4>
-						<h5>Simple version</h5>
-						<script src="https://gist.github.com/Bazhful/c14848d0967897dfe10b0445048f78de.js"></script>
-						<h5>Advanced version</h5>
-						<script src="https://gist.github.com/Bazhful/754a6baff4a44243d85a99218b42abf2.js"></script>
+						<h5 style="text-decoration: underline;"> code </h5>
+						<script src="https://gist.github.com/Bazhful/ac8224270ad0e20665adb18f68c5e0ea.js"></script><br><br>
+						<h3 class="mt-3">Selection Sort</h3>
+				    	<p> Coming soon, ran out of energy </p>
 
 				
 				<div class="blog-comments-section">
