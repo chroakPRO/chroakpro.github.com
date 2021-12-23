@@ -170,8 +170,20 @@
 						<h3 style="text-decoration: underline;"> algorithm </h3>
 						<h3 style="text-decoration: underline;"> selection-sort </h3>
 						<h4 style="text-decoration: ;"> Explanation & CSharp Code</h4>
-						<p>The diffrence between </p>
-				    	<p> Coming soon, ran out of energy </p>
+						<p>The difference between selection-sort and bubble-sort is the number of swapping operations needed during runtime.
+                        <h5 style="text-decoration: underline;"> swaps </h5>
+                            \(1.\) Bubble-sort \(O(n^2)\)<br>
+							\(2.\) Selection-sort \(O(n)\)<br>
+                          
+                          The code displays this quite perfectly. 
+                         bubble-sort swaps on the second for-loop. Check code below...</p>
+                        <script src="https://pastebin.com/embed_js/WGT1xYm6?theme=dark"></script>
+                         For loop 1 got executed 8 times, while For loop 2 got executed 64 times. Which is \(8^2 which is O(n^2)\), this means that bubble-sort swaps on the second for loop which requires elements of x^2. Selection-sort on the other hand swaps on first for loop. Which results in \(8 which is O(n)\).
+                         Selection-sort requires the same amount of swaps as there are elements in the main array. In our example for loop 1 was executed 8 times.<br>
+                            The diffrence between 8-64 executions is minimal in most cases. Let's say you had to pay 5$ for every memory swap. This would make selection-sort a way better option then bubble-sort.
+                            So as you most likely have figured out by now the diffrence is the amount of memory swaps needed.
+                        <h5 style="text-decoration: underline;"> code </h5>
+						<script src="https://pastebin.com/embed_js/JCqZMtYf?theme=dark"></script>
 				
 		    </div><!--//container-->
 	    </article>
