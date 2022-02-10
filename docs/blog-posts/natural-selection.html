@@ -101,69 +101,84 @@
 	    <article class="blog-post px-3 py-5 p-md-5">
 		    <div class="container single-col-max-width">
 			    <header class="blog-post-header">
-				    <h2 class="title mb-2">Natural Selection [python, algo, fitness, mutation]</h2>
-				    <div class="meta mb-3"><span class="date">Published 2022-02-09</span><span class="time">20 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
-			    </header>
-			    
-			    <div class="blog-post-body">
-					<h2 style="text-decoration: underline;"> General idea </h2>
-					<h4 style="text-decoration: ;"> Concept</h4>
-				    <p>
-						Some type of "playground" is required. We may employ Python's secret weapon.... lists,
-						We make a 100x100 two-dimensional array, thus the ARRAY variable gets the scope <br><br>
-						
-						\(arr[0-100][0-100]\)<br><br>
+                    <h2 class="title mb-2">Natural Selection [python, algo, fitness, mutation]</h2>
+                    <div class="meta mb-3"><span class="date">Published 2022-02-09</span><span class="time">20 min read</span><span class="comment"><a href="#">0 comments</a></span></div>
+                </header>
+                
+                <div class="blog-post-body">
+                    <h2 style="text-decoration: underline;"> General idea </h2>
+                    <h4 style="text-decoration: ;"> Concept</h4>
+                    <p>
+                        Some type of "playground" is required. We may employ Python's secret weapon.... lists,
+                        We make a 100x100 two-dimensional array, thus the ARRAY variable gets the scope <br><br>
+                        
+                        \(arr[0-100][0-100]\)<br><br>
 
-						It's easy to visualize the "playground" looking like a tic-tac-toe board. Instead of the 3x3 squares used in tic-tac-toe, 
-						we use 100x100 squares instead to simulation land/hunting-ground."<br>
-						This simulation is meant to simulate the relation between hunter and prey, and see how we can use natural selection, 
-						or more technical fitness functions and mutation. This topics will be explain further down don't you worry. <br><br><br><br>
-						<h4 style="text-decoration: underline;"> TLDR (for people with no attention-span) </h4>
-						We put weight on certain attribtures depnding on how well they performed during the iteration.<br><br>
-						<h4 style="text-decoration: ;"> Example 01</h4>
-						Prey 01 survied with 150hp, but Prey 02 survived with 120hp. Prey01's genes are given a higher weight. We take the top half of the class and couple them up.
-						This will generate two childern with mutate DNA. Genes from both XX and XY will be found in the childern.<br><br>
-						<h4 style="text-decoration: ;"> End Goal</h4>
-						The ultimate objective is to see if the prey can outlast the hunter. Also I wanna see if prey can turn into hunters but that's for version 2.0 <br><br>
-						<h4 style="text-decoration: ;"> Video Explanation (poor quality.)</h4>
-						<iframe src="https://www.youtube.com/embed/wOKmNyW0hIk?autoplay=0&mute=0"></iframe> <br><br><br><br>
-						<h2 style="text-decoration: underline;"> Agents </h2>
-						<h3 style="text-decoration: underline;"> Prey </h3>
-						I need to create an attribute list for prey.
-						What every "fitness parameters" does in practis.<br>
-						Ex: If your speed attribute/rating is 52, for example. 
-						And I have a regulation that states if your speed is beyond 50, you...<br>
-						Increase your chances of escaping an attack by 15%.<br><br> 
+                        It's easy to visualize the "playground" looking like a tic-tac-toe board. Instead of the 3x3 squares used in tic-tac-toe, 
+                        we use 100x100 squares instead to simulation land/hunting-ground."<br>
+                        This simulation is meant to simulate the relation between hunter and prey, and see how we can use natural selection, 
+                        or more technical fitness functions and mutation. This topics will be explain further down don't you worry. <br><br><br><br>
+                        <h4 style="text-decoration: underline;"> TLDR (for people with no attention-span) </h4>
+                        We put weight on certain attribtures depnding on how well they performed during the iteration.<br><br>
+                        <h4 style="text-decoration: ;"> Example 01</h4>
+                        Prey 01 survived with 150hp, but Prey 02 survived with 120hp. Prey01's genes are given a higher weight. We take the top half of the class and couple them up.
+                        This will generate two children with mutating DNA. Genes from both XX and XY will be found in the childern.<br><br>
+                        <h4 style="text-decoration: ;"> End Goal</h4>
+                        The ultimate objective is to see if the prey can outlast the hunter. Also I wanna see if prey can turn into hunters but that's for version 2.0 <br><br>
+                        <h4 style="text-decoration: ;"> Video Explanation (poor quality.)</h4>
+                        <iframe src="https://www.youtube.com/embed/wOKmNyW0hIk?autoplay=0&mute=0"></iframe> <br><br><br><br>
+                        <h2 style="text-decoration: underline;"> Agents </h2>
+                        <h3 style="text-decoration: underline;"> Prey </h3>
+                        I need to create an attribute list for prey.
+                        What every "fitness parameter" does in practice.<br>
+                        Ex: If your speed attribute/rating is 52, for example. 
+                        And I have a regulation that states if your speed is beyond 50, you...<br>
+                        Increase your chances of escaping an attack by 15%.<br><br> 
 
-						I need to declare this ahead of time so that I may adjust the fitenss/mutation subroutines more easily.<br><br>
-						<h4 style="text-decoration: ;"> GEN POOL </h4>
-						Gen 0: Health (How much health tbey have.)<br>
-						Gen 1: Weight (How much damage they take)<br>
+                        I need to declare this ahead of time so that I may adjust the fitenss/mutation subroutines more easily.<br><br>
+                        <h4 style="text-decoration: ;"> GEN POOL </h4>
+                        Gen 0: Health (How much health tbey have.)<br>
+                        Gen 1: Weight (How much damage they take)<br>
 
-						Gen 2: attack power (This will always be 0)<br>
+                        Gen 2: attack power (This will always be 0)<br>
 
-						Gen 3: Speed (How good they are at evading prey.)<br>
+                        Gen 3: Speed (How good they are at evading prey.)<br>
 
-						Gen 4: Age (Decay)<br>
+                        Gen 4: Age (Decay)<br>
 
-						Days Survied: How many iterations the prey has survived.<br>
+                        Days Survived: How many iterations the prey has survived.<br>
 
-						Enemy Close: How many times was the prey within X amount of blocks of hunter. (Day to day basis)<br><br>
-						<h3 style="text-decoration: underline;"> Hunter </h3>
+                        Enemy Close: How many times was the prey within X amount of blocks of hunter. (Day to day basis)<br><br>
+						<h4 style="text-decoration: ;"> FITNESS FUNCTION </h4>
 
-						<h4 style="text-decoration: ;"> GEN POOL </h4>
-						Gen 0: Health (How much health tbey have.)<br>
-						Gen 1: Weight (How much damage they take)<br>
 
-						Gen 2: attack power (How much damage they do.)<br>
+                        <h3 style="text-decoration: underline;"> Hunter </h3>
 
-						Gen 3: Speed (How fast they perform damage.)<br>
-						
-						Gen 4: Age (Decay)<br>
+                        <h4 style="text-decoration: ;"> GEN POOL </h4>
+                        Gen 0: Health (How much health tbey have.)<br>
+                        Gen 1: Weight (How much damage they take)<br>
 
-						Feral Mode: Bool -> if the hunter kills at least three prey the night before.
+                        Gen 2: attack power (How much damage they do.)<br>
+
+                        Gen 3: Speed (How fast they perform damage.)<br>
+                        
+                        Gen 4: Age (Decay)<br>
+
+                        Feral Mode: Bool -> if the hunter kills at least three prey the night before.
 
 						<br><br>
+						<h4 style="text-decoration: ;"> FITNESS FUNCTION </h4>
+
+						<h2 style="text-decoration: underline;"> Advanced Information </h2>
+						<h4 style="text-decoration: ;"> fitness function </h4>
+						I haven't done a lot of research on fitness functions. 
+						I think I'll have around 3 hours of study time dedicated to the topic
+						A fitness function's purpose is to determine how well something performed on a given task. 
+						So, if the assignment is to travel from point A to point B, as quick as possible. 
+						The "object" with the greatest fitness score will be the object who completes the job the fastest. 
+						In our situation, we look at prey survival rates and which characteristics cause the greatest harm and success when it comes to survival.
+					</h4>
+						<h4 style="text-decoration: ;"> mutation function </h4>
 				
 		    </div><!--//container-->
 	    </article>
